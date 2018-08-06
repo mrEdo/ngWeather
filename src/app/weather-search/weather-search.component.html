@@ -1,0 +1,17 @@
+
+<header>
+	<img id="logo" src="assets/images/weather-logo.png" alt="">
+	<h1>Ng Weather</h1>
+</header>
+
+<input type="text" #searchTerm>
+<button mat-flat-button (click)="searchWeather(searchTerm.value)">Search Weather</button>
+<!-- <h4>{{ cityName }}</h4>
+<h1>{{ cityWeather }}</h1> -->
+<div *ngFor="let w of forecastArray">
+	<h4>{{ w.dt_txt }}</h4>
+	<ul>
+		<li> Temp: {{w.main.temp}}</li>
+		<li> Wind: {{w.wind.speed}}mph</li>
+	</ul>
+</div>
